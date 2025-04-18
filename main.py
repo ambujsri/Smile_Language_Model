@@ -30,9 +30,7 @@ torch.cuda.manual_seed(seed)
 torch.cuda.manual_seed_all(seed)
 
 
-dataset = pd.read_csv('dataset/dataset_EC50.csv')
-# added_scores = pd.read_csv('./top36_dataset_filtered.csv')
-# combined_scores = pd.concat([decoy_scores, added_scores])
+dataset = pd.read_csv('dummy_data.csv')
 dataset_shuffled = dataset.sample(frac=1, random_state=42).reset_index(drop=True)
 train_set, blind_set = train_test_split(dataset_shuffled, test_size=0.2, random_state=42)
 
@@ -62,6 +60,7 @@ num_epochs = 50
 batch_size1 = 16
 n_splits=5
 ctr = 1
+
 # Create dataset and dataloader
 dataset = MolecularDataset(X_train, names_list, y_train)
 dataloader = DataLoader(dataset, batch_size=batch_size1, shuffle=True)
