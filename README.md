@@ -1,4 +1,4 @@
-# 🧪 SMILES Language Modeling Project
+# 🧪 SMILES Language Model Project
 
 This repository contains code and utilities for building and evaluating a **SMILES-based Language Model** for molecular classification using deep learning. The model is trained using PyTorch and leverages RDKit for chemical informatics.
 
